@@ -16,10 +16,19 @@ public class AddressBook {
 	 * Add a new buddy into the address book
 	 * @param buddy, buddy to be added into the address book
 	 */
-	public void addBuddyList(BuddyInfo buddy) {
+	public void addBuddy(BuddyInfo buddy) {
 		buddyList.add(buddy);
 	}
 
+	/**
+	 * Remove a buddy off the address book
+	 * @param index, index of buddy to be removed from the list
+	 */
+	public void removeBuddy(int index) {
+		buddyList.remove(index);
+	}
+
+	
 	/**
 	 * Get the name of this address book
 	 * @return addressBookName, return name of the address book
@@ -42,6 +51,14 @@ public class AddressBook {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Address Book");
+		BuddyInfo buddy = new BuddyInfo();
+		buddy.setName("Micheal");
+		buddy.setAddress("Ottawa");
+		buddy.setPhoneNumber(66681788);
+		AddressBook addressBook = new AddressBook();
+		addressBook.addBuddy(buddy);
+		addressBook.removeBuddy(0);
+		
 	}
 
 }
