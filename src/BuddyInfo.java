@@ -5,6 +5,20 @@ public class BuddyInfo {
 	public int phoneNumber;
 	
 	/**
+	 * Method to create a buddy object
+	 * 
+	 * @param name; Name of buddy
+	 * @param address; buddy's address
+	 * @param phoneNumber; buddy's phone number
+	 */
+	public BuddyInfo(String name, String address, int phoneNumber) {
+		this.name = name;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+	}
+	
+	
+	/**
 	 * Method to get buddy's name
 	 * @return name, return buddy's name
 	 */
@@ -59,8 +73,7 @@ public class BuddyInfo {
 		// TODO Auto-generated method stub
 		System.out.println("Hello world!");
 		
-		BuddyInfo buddy = new BuddyInfo();
-		buddy.setName("Batman");
+		BuddyInfo buddy = new BuddyInfo("Micheal", "80 Somewhere", 222);
 		System.out.println("Hello " + buddy.getName());
 	}
 
